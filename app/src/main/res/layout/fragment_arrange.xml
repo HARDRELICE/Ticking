@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.arrange.ArrangeFragment">
+
+	<CalendarView
+		android:id="@+id/arrange_calendar_month"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_below="@+id/arrange_calendar_month"
+		android:id="@+id/arrange_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?attr/colorOnPrimary">
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/drag_bar"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:clickable="true"
+			android:focusable="true"
+			android:background="@drawable/round_top_corner"
+			app:layout_constraintTop_toTopOf="@+id/arrange_content">
+			<View
+				android:layout_width="64dp"
+				android:layout_height="7dp"
+				android:background="@drawable/round_corner_small_bar"
+				android:elevation="3dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		<TextView
+			android:id="@+id/arrange_content_text_view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/activity_horizontal_margin"
+			app:layout_constraintTop_toBottomOf="@id/drag_bar"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:visibility="gone"
+			android:background="@color/light_primary"
+			android:gravity="center"
+			android:text="@string/description_no_arrangement"
+			android:longClickable="false" />
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/arrange_content_recycler_view"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+			app:layout_constraintTop_toBottomOf="@id/drag_bar"
+			app:layout_constraintBottom_toBottomOf="parent"
+			tools:listitem="@layout/list_item_arrange"/>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

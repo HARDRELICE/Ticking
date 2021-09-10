@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Ticking</string>
+	<string name="title_arrange">规划</string>
+	<string name="title_record">记录</string>
+	<string name="title_analysis">分析</string>
+	<string name="title_setting">设置</string>
+	<string name="description_no_arrangement">开始规划吧！</string>
+</resources>

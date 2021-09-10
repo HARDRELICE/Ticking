@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/mobile_navigation"
+	app:startDestination="@+id/navigation_arrange">
+
+	<fragment
+		android:id="@+id/navigation_arrange"
+		android:name="com.hardrelice.ticking.ui.arrange.ArrangeFragment"
+		android:label="@string/title_arrange"
+		tools:layout="@layout/fragment_arrange" />
+
+	<fragment
+		android:id="@+id/navigation_record"
+		android:name="com.hardrelice.ticking.ui.dashboard.RecordFragment"
+		android:label="@string/title_record"
+		tools:layout="@layout/fragment_record" />
+
+	<fragment
+		android:id="@+id/navigation_analysis"
+		android:name="com.hardrelice.ticking.ui.notifications.AnalysisFragment"
+		android:label="@string/title_analysis"
+		tools:layout="@layout/fragment_analysis" />
+
+	<fragment
+		android:id="@+id/navigation_setting"
+		android:name="com.hardrelice.ticking.ui.setting.SettingFragment"
+		android:label="@string/title_setting"
+		tools:layout="@layout/fragment_setting" />
+</navigation>

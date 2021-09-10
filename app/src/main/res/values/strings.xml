@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">Ticking</string>
+	<string name="title_arrange">Arrange</string>
+	<string name="title_record">Record</string>
+	<string name="title_analysis">Analysis</string>
+	<string name="title_setting">Setting</string>
+	<string name="description_no_arrangement">Let\'s Arrange Your Day!</string>
+</resources>
