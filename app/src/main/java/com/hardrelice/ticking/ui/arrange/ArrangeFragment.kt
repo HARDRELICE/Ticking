@@ -17,6 +17,7 @@ import com.hardrelice.ticking.util.GraphicUtil
 
 class ArrangeFragment : Fragment() {
 
+
     private lateinit var arrangeViewModel: ArrangeViewModel
     private var _binding: FragmentArrangeBinding? = null
 
